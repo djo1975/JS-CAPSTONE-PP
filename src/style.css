@@ -1,4 +1,4 @@
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -52,4 +52,68 @@ footer {
   text-align: center;
   border-top: 2px solid;
   margin-top: 2rem;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav{
+  background-color: red;
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  float: right;
+  padding:  0 5px;
+}
+
+#cards-container {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  text-align: center;
+  background-color: pink;
+}
+
+img {
+  width: 100%;
+}
+
+#desc {
+  display: flex;
+  flex-direction: column;
+  background-color: orange;
+  justify-content: center;
+  align-items: center;
+}
+
+#name-like {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#name {
+  margin: 0;
+}
+
+.like-btn {
+  display: block;
+  margin-left: 6px;
+}
+
+button {
+  width: 80%;
+}
+
+footer {
+  bottom: 0;
+  position: absolute;
 }

@@ -41,6 +41,10 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
   plugins: [
@@ -52,13 +56,11 @@ module.exports = {
   ],
   resolve: {
     fallback: {
-      "http": require.resolve("stream-http"),
-      "https": require.resolve("https-browserify"),
-      "zlib": require.resolve("browserify-zlib"),
-      "stream": require.resolve("stream-browserify")
-    }
-  }
-  
-  
-  
-}  
+      http: require.resolve('stream-http'),
+      https: require.resolve('https-browserify'),
+      zlib: require.resolve('browserify-zlib'),
+      stream: require.resolve('stream-browserify'),
+    },
+  },
+
+};
