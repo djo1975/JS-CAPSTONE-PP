@@ -3,12 +3,13 @@ function createCommentModal(product) {
   commentModal.classList.add('comment-modal');
 
   const closeBtn = document.createElement('button');
-  closeBtn.innerHTML = 'Close';
-  commentModal.appendChild(closeBtn);
+closeBtn.innerHTML = '<i class="fas fa-times"></i>';
+commentModal.appendChild(closeBtn);
 
-  closeBtn.addEventListener('click', () => {
-    commentModal.style.display = 'none';
-  });
+closeBtn.addEventListener('click', () => {
+  commentModal.style.display = 'none';
+});
+
 
   const productImage = document.createElement('img');
   productImage.src = product.strMealThumb;
@@ -43,23 +44,18 @@ function createCommentModal(product) {
   addCommentTitle.textContent = 'Add comment';
   addCommentSection.appendChild(addCommentTitle);
 
-  const nameLabel = document.createElement('label');
-  nameLabel.textContent = 'Your name';
-  addCommentSection.appendChild(nameLabel);
-
   const nameInput = document.createElement('input');
   nameInput.type = 'text';
+  nameInput.placeholder = 'Your name';
   addCommentSection.appendChild(nameInput);
-
-  const commentLabel = document.createElement('label');
-  commentLabel.textContent = 'Your insights';
-  addCommentSection.appendChild(commentLabel);
+  
 
   const commentTextarea = document.createElement('textarea');
   commentTextarea.rows = 4;
   commentTextarea.cols = 50;
+  commentTextarea.placeholder = 'Your insights';
   addCommentSection.appendChild(commentTextarea);
-
+  
   const submitBtn = document.createElement('button');
   submitBtn.innerHTML = 'Submit';
   addCommentSection.appendChild(submitBtn);
