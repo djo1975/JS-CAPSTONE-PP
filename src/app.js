@@ -22,8 +22,8 @@ export default function init() {
         commentBtn.innerHTML = 'Comment';
         card.appendChild(commentBtn);
         const reservationBtn = document.createElement('button');
-        reservationBtn.innerHTML = 'Comment';
-        card.appendChild(commentBtn);
+        reservationBtn.innerHTML = 'Reservation';
+        card.appendChild(reservationBtn);
 
         const commentModal = createCommentModal(product);
         cardContainer.appendChild(commentModal);

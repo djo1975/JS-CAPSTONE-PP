@@ -1,4 +1,5 @@
 import { commentPost, getLastTwoComments } from './comment-form.js';
+import calCom from './comment-counter.js';
 
 function createCommentModal(product) {
   const commentModal = document.createElement('div');
@@ -84,4 +85,5 @@ function createCommentModal(product) {
 
   return commentModal;
 }
+calCom();
 export default createCommentModal;

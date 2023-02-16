@@ -1,8 +1,14 @@
 import { addLike, getLikes, ides } from './api.js';
+import calCards from './cards-counter.js';
 
 function createCard(product) {
   const card = document.createElement('div');
   card.classList.add('card');
+
+  const products = document.querySelectorAll('.card');
+  const numProducts = products.length + 1;
+  const headerNavItem = document.querySelector('.header__nav-item');
+  headerNavItem.textContent = `Recepies (${numProducts})`;
 
   const cardImage = document.createElement('img');
   cardImage.src = product.strMealThumb;
@@ -43,5 +49,5 @@ function createCard(product) {
 
   return card;
 }
-
+calCards();
 export default createCard;
