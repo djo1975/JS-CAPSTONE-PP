@@ -26,5 +26,4 @@ getProductData().then((productData) => {
 
     document.querySelector('.card-container').appendChild(productContainer);
   });
-})
-  .catch((error) => console.error(error));
+});

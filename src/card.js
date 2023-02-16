@@ -1,3 +1,5 @@
+import { addLike, getLikes, ides } from './api.js';
+
 function createCard(product) {
   const card = document.createElement('div');
   card.classList.add('card');
@@ -23,14 +25,21 @@ function createCard(product) {
   cardTitle.textContent = product.strMeal;
   card.appendChild(cardTitle);
 
-  const cardDescription = document.createElement('p');
-  const words = product.strInstructions.split(' ');
-  if (words.length > 50) {
-    cardDescription.textContent = `${words.slice(0, 50).join(' ')}...`;
-  } else {
-    cardDescription.textContent = product.strInstructions;
-  }
-  card.appendChild(cardDescription);
+  const index = ides.indexOf(product.idMeal);
+
+  const updateLikeCount = async () => {
+    const likes = await getLikes();
+    const productLikes = likes.find((like) => like.item_id === ides[index]);
+    likeCount.textContent = `${productLikes.likes}`;
+  };
+
+  // Update like count when the card is created
+  updateLikeCount();
+
+  likeIcon.addEventListener('click', async () => {
+    await addLike(index);
+    await updateLikeCount();
+  });
 
   return card;
 }

@@ -21,6 +21,9 @@ export default function init() {
         const commentBtn = document.createElement('button');
         commentBtn.innerHTML = 'Comment';
         card.appendChild(commentBtn);
+        const reservationBtn = document.createElement('button');
+        reservationBtn.innerHTML = 'Comment';
+        card.appendChild(commentBtn);
 
         const commentModal = createCommentModal(product);
         cardContainer.appendChild(commentModal);
@@ -31,6 +34,5 @@ export default function init() {
 
         cardContainer.appendChild(card);
       });
-    })
-    .catch((error) => console.error(error));
+    });
 }
