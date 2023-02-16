@@ -28,8 +28,13 @@ export default function init() {
         const commentModal = createCommentModal(product);
         cardContainer.appendChild(commentModal);
 
+        // commentBtn.addEventListener('click', () => {
+        //   commentModal.style.display = 'block';
+        // });
+
         commentBtn.addEventListener('click', () => {
-          commentModal.style.display = 'block';
+          commentModal.classList.remove('hidden');
+          commentModal.classList.add('visible');
         });
 
         cardContainer.appendChild(card);

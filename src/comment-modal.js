@@ -4,6 +4,7 @@ import calCom from './comment-counter.js';
 function createCommentModal(product) {
   const commentModal = document.createElement('div');
   commentModal.classList.add('comment-modal');
+  commentModal.classList.add('hidden')
 
   const closeBtn = document.createElement('i');
   closeBtn.classList.add('fas', 'fa-times');
@@ -40,8 +41,8 @@ function createCommentModal(product) {
         commentsSection.innerHTML = '';
 
         comments.forEach((comment) => {
-          const commentP = document.createElement('h3');
-          commentP.textContent = `${comment.creation_date}:${comment.username}:${comment.comment}`;
+          const commentP = document.createElement('p');
+          commentP.textContent = `${comment.creation_date}: ${comment.username} ${comment.comment}`;
           commentsSection.appendChild(commentP);
         });
       });

@@ -54,8 +54,8 @@ nav {
 .comment-modal i {
   padding: 1rem;
   position: fixed;
-  right: 1rem;
-  top: 1rem;
+  right: 13%;
+  top: 10%;
   font-size: xx-large;
 }
 
@@ -80,7 +80,6 @@ nav {
 }
 
 .card h2 {
-  position: relative;
   margin-top: -2rem;
   margin-bottom: 1rem;
   font-size: large;
@@ -139,7 +138,7 @@ footer {
   margin-top: 2rem;
 }
 
-.comment-modal {
+/*.comment-modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -149,79 +148,93 @@ footer {
   height: 100%;
   overflow: auto;
   background-color: rgb(217 202 202);
+}  */
+
+.comment-modal {
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  width: 80%;
+  height: 500px;
+  overflow-y: scroll;
+  border-radius: 5px;
+  /* visibility: hidden; */
+  position: fixed;
+  top: 10%;
 }
 
-.comment-modal.open {
-  display: flex;
+.visible {
+  visibility: visible;
 }
+
+.hidden {
+  visibility: hidden;
+}
+
+/* .comment-modal.open {
+  display: flex;
+} */
 
 .comment-modal img {
   width: 60%;
   height: 60%;
-  position: relative;
-  left: 12rem;
   padding-top: 1rem;
 }
 
-.comment-modal .comments {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1rem;
-  margin-left: 17rem;
-  height: 12rem;
-  height: 57px;
-  width: 40%;
-  overflow-y: scroll;
+.comments {
+  width: 60%;
+  display: block;
   align-items: center;
 }
 
+.comments p {
+  margin-bottom: 5px;
+}
+
 .comment-modal input {
-  padding: 1rem;
-  position: relative;
-  left: -6rem;
+  width: 70%;
 }
 
 .comment-modal textarea {
-  padding: 1rem;
-  position: relative;
-  left: -6rem;
+  width: 100%;
 }
 
 .comment-modal button {
-  padding: 1rem;
-  position: relative;
-  left: 4rem;
+  padding: 5px;
 }
 
 .comment-modal p {
   width: 60%;
-  margin-left: 12rem;
 }
 
 .comment-modal h2 {
   margin: 1rem;
-  position: relative;
-  right: -25rem;
 }
-
+/* 
 .comment-modal h3 {
   font-size: x-large;
-}
+} */
 
+/*
 .comment-modal h4 {
   position: relative;
-  left: 1rem;
   font-size: xx-large;
+} */
+
+/* .add-comment {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+} */
+.add-comment {
+  width: 50%;
+  margin-top: 10px;
 }
 
-.comment-modal .add-comment {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1rem;
-  margin-left: 23rem;
-  margin-bottom: 5rem;
-  align-items: baseline;
+.add-comment > * {
+  display: block;
+  margin-bottom: 10px;
 }
 
 .modal-content {
