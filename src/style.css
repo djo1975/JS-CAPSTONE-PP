@@ -19,12 +19,13 @@ body {
 
 header {
   display: flex;
-    gap: 7rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    margin-right: 10rem;
-    align-items: center;
+  gap: 7rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-right: 10rem;
+  align-items: center;
 }
+
 nav {
   display: flex;
   gap: 6rem;
@@ -50,6 +51,14 @@ nav {
   padding: 4rem;
 }
 
+.comment-modal i {
+  padding: 1rem;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  font-size: xx-large;
+}
+
 .card {
   width: calc(30.33% - 1rem);
   margin: 1rem;
@@ -69,19 +78,22 @@ nav {
 .card p {
   padding: 1rem;
 }
+
 .card h2 {
   position: relative;
-    margin-top: -2rem;
-    margin-bottom: 1rem;
-    font-size: large;
-    margin-right: 1rem;
+  margin-top: -2rem;
+  margin-bottom: 1rem;
+  font-size: large;
+  margin-right: 1rem;
 }
+
 .like-section {
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: -13rem;
+  flex-direction: column;
+  align-items: center;
+  margin-right: -13rem;
 }
+
 .card .like {
   display: flex;
   align-items: center;
@@ -99,19 +111,22 @@ nav {
   font-size: 1.5rem;
   color: #333;
 }
-.header__nav-item{
-text-decoration: underline;
-    font-size: larger;}
+
+.header__nav-item {
+  text-decoration: underline;
+  font-size: larger;
+}
+
 .card button {
   width: 80%;
-    padding: 1rem;
-    margin-top: auto;
-    background-color: #333;
-    color: #fff;
-    margin-bottom: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 1rem;
+  margin-top: auto;
+  background-color: #333;
+  color: #fff;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 footer {
@@ -135,52 +150,70 @@ footer {
   overflow: auto;
   background-color: rgb(217 202 202);
 }
+
 .comment-modal.open {
   display: flex;
-  }
+}
 
 .comment-modal img {
   width: 60%;
-    height: 60%;
-    position: relative;
-    left: 12rem;
-    padding-top: 1rem;
+  height: 60%;
+  position: relative;
+  left: 12rem;
+  padding-top: 1rem;
 }
-.comment-modal i {
-  padding: 1rem;
-    position: fixed;
-    right: 1rem;
-    top: 1rem;
-    font-size: xx-large;
-}
+
 .comment-modal .comments {
   display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-    margin-left: 17rem;
-    height: 12rem;
-    height: 57px;
-    width: 40%;
-    overflow-y: scroll;
-    align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-left: 17rem;
+  height: 12rem;
+  height: 57px;
+  width: 40%;
+  overflow-y: scroll;
+  align-items: center;
 }
+
+.comment-modal input {
+  padding: 1rem;
+  position: relative;
+  left: -6rem;
+}
+
+.comment-modal textarea {
+  padding: 1rem;
+  position: relative;
+  left: -6rem;
+}
+
+.comment-modal button {
+  padding: 1rem;
+  position: relative;
+  left: 4rem;
+}
+
 .comment-modal p {
   width: 60%;
   margin-left: 12rem;
 }
+
 .comment-modal h2 {
   margin: 1rem;
-    position: relative;
-    right: -25rem;
+  position: relative;
+  right: -25rem;
 }
+
 .comment-modal h3 {
- font-size: x-large;
+  font-size: x-large;
 }
+
 .comment-modal h4 {
   position: relative;
-    left: 1rem;
-    font-size: xx-large;
+  left: 1rem;
+  font-size: xx-large;
 }
+
 .comment-modal .add-comment {
   display: flex;
   flex-direction: column;
@@ -188,8 +221,9 @@ footer {
   margin-top: 1rem;
   margin-left: 23rem;
   margin-bottom: 5rem;
-  align-items: baseline;;
+  align-items: baseline;
 }
+
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto;

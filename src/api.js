@@ -49,7 +49,7 @@ const addComment = async (itemId, name, comment) => {
 };
 const getComment = async (id) => {
   const comments = await fetch(
-    `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/tKVlvnEbmf4TMWB77SE7/comments?item_id=${id}`,
+    `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/tKVlvnEbmf4TMWB77SE?7/commentsitem_id=${id}`,
     {
       method: 'Get',
     },

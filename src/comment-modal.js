@@ -5,8 +5,8 @@ function createCommentModal(product) {
   const commentModal = document.createElement('div');
   commentModal.classList.add('comment-modal');
 
-  const closeBtn = document.createElement('button');
-  closeBtn.innerHTML = '<i class="fas fa-times"></i>';
+  const closeBtn = document.createElement('i');
+  closeBtn.classList.add('fas', 'fa-times');
   commentModal.appendChild(closeBtn);
 
   closeBtn.addEventListener('click', () => {
@@ -33,15 +33,22 @@ function createCommentModal(product) {
   commentsSection.classList.add('comments');
   commentModal.appendChild(commentsSection);
 
-  getLastTwoComments(product.idMeal)
-    .then((comments) => {
-      commentHeader.innerHTML = `Comment (${comments.length})`;
-      comments.forEach((comment) => {
-        const commentP = document.createElement('h3');
-        commentP.textContent = `${comment.creation_date}:${comment.username}:${comment.comment}`;
-        commentsSection.appendChild(commentP);
+  function updateComments() {
+    getLastTwoComments(product.idMeal)
+      .then((comments) => {
+        commentHeader.innerHTML = `Comments (${comments.length})`;
+        commentsSection.innerHTML = '';
+
+        comments.forEach((comment) => {
+          const commentP = document.createElement('h3');
+          commentP.textContent = `${comment.creation_date}:${comment.username}:${comment.comment}`;
+          commentsSection.appendChild(commentP);
+        });
       });
-    });
+  }
+
+  updateComments();
+  const commentInterval = setInterval(updateComments, 10000);
 
   const addCommentSection = document.createElement('div');
   addCommentSection.classList.add('add-comment');
@@ -64,20 +71,29 @@ function createCommentModal(product) {
   const submitBtn = document.createElement('button');
   submitBtn.innerHTML = 'Submit';
   addCommentSection.appendChild(submitBtn);
-
+  // eslint-disable-next-line no-unused-vars
+  let autoRefreshInterval;
   submitBtn.addEventListener('click', () => {
     const username = nameInput.value;
     const comment = commentTextarea.value;
     commentPost(product.idMeal, username, comment)
       .then(() => {
-        // Add the new comment to the comments section
-        const newCommentP = document.createElement('p');
-        newCommentP.textContent = `${username}: ${comment}`;
-        commentsSection.appendChild(newCommentP);
-
-        // Clear the inputs
+      // clear inputs
         nameInput.value = '';
         commentTextarea.value = '';
+        // update comments
+        updateComments();
+        // start interval to automatically refresh comments
+        clearInterval(commentInterval);
+        autoRefreshInterval = setInterval(() => {
+          getLastTwoComments(product.idMeal)
+            .then((comments) => {
+              if (comments.length > 2) {
+              // if there are more than two comments, update the comments section
+                updateComments();
+              }
+            });
+        }, 10000);
       });
   });
 
