@@ -4,7 +4,7 @@ import calCom from './comment-counter.js';
 function createCommentModal(product) {
   const commentModal = document.createElement('div');
   commentModal.classList.add('comment-modal');
-  commentModal.classList.add('hidden')
+  commentModal.classList.add('hidden');
 
   const closeBtn = document.createElement('i');
   closeBtn.classList.add('fas', 'fa-times');

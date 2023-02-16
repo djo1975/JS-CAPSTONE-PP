@@ -138,7 +138,7 @@ footer {
   margin-top: 2rem;
 }
 
-/*.comment-modal {
+/* .comment-modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -160,9 +160,11 @@ footer {
   height: 500px;
   overflow-y: scroll;
   border-radius: 5px;
+
   /* visibility: hidden; */
   position: fixed;
   top: 10%;
+  box-shadow: 20px 20px 10px grey;
 }
 
 .visible {
@@ -212,7 +214,8 @@ footer {
 .comment-modal h2 {
   margin: 1rem;
 }
-/* 
+
+/*
 .comment-modal h3 {
   font-size: x-large;
 } */
