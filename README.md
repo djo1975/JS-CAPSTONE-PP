@@ -103,6 +103,11 @@ To clone this repository to your desired folder, follow the steps below:
 
 To run the project, execute the following command:
 
+-Run Git clone https://github.com/djo1975/JS-CAPSTONE-PP.git
+-Run cd JS-CAPSTOPE-PP
+-Run npm install
+-Run npm start
+
 **Click the "Go Live" button on your IDE(VS Code in this case)**
 
 ### Deployment
