@@ -3,7 +3,7 @@
 <div>
 
   <h1><b>JavaScript capstone project</b></h1><br/><br/>
-
+  - Our video presentation [https://drive.google.com/file/d/1bod0H6cAUwZGsQHduMqOJGt9s-Bode7c/view?usp=sharing]
 </div>
 
 # 📗 Table of Contents
@@ -84,7 +84,7 @@ To clone this repository to your desired folder, follow the steps below:
 
 ```sh
   cd my-folder
-  git clone https://github.com/djo1975/Webpack.git
+  git clone https://github.com/djo1975/JS-CAPSTONE-PP.git
 ```
 **How to use tests**
 -Our tests are mede in js using Jest
@@ -93,7 +93,7 @@ To clone this repository to your desired folder, follow the steps below:
 
 - Follow the steps below
 
-  - Visit this link "https://github.com/djo1975/Webpack.git"
+  - Visit this link "https://github.com/djo1975/JS-CAPSTONE-PP.git"
   - Click the green button labelled "code"
   - Select the "Open with GitHub Desktop" option
   - After the GitHub Desktop add opens, click the "clone repo" button
@@ -108,7 +108,7 @@ To run the project, execute the following command:
 
 You can deploy this project by:
 
-- visiting your repository on [GitHub](https://github.com)
+- visiting your repository on [GitHub](https://github.com/djo1975/JS-CAPSTONE-PP.git)
 - Click on settings
 - Go to the "Pages" option
 - Select the main branch and save
