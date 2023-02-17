@@ -3,6 +3,7 @@
 <div>
 
   <h1><b>JavaScript capstone project</b></h1><br/><br/>
+  
   - Our video presentation [https://drive.google.com/file/d/1bod0H6cAUwZGsQHduMqOJGt9s-Bode7c/view?usp=sharing]
 </div>
 
