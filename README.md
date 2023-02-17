@@ -2,7 +2,7 @@
 
 <div>
 
-  <h1><b>To Do list: interactive list</b></h1><br/><br/>
+  <h1><b>JavaScript capstone project</b></h1><br/><br/>
 
 </div>
 
@@ -25,10 +25,9 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 To Do list: interactive list <a name="about-project"></a>
+# 📖 JavaScript capstone project<a name="about-project"></a>
 
-** To Do list: interactive list** In this project, you will add some functionality to your application to make it interactive. The user will also be able to mark task completion by selecting the corresponding checkbox (or undo it by unchecking the checkbox). The updated tasks list will be stored in local storage.
-
+** JavaScript capstone project ** The JavaScript capstone project is about building web application based on an external API. You will select an API that provides data about a topic that you like and then build the webapp around it. The webapp will have 2 or 3 user interfaces (depending on the size of your team):
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -87,7 +86,9 @@ To clone this repository to your desired folder, follow the steps below:
   cd my-folder
   git clone https://github.com/djo1975/Webpack.git
 ```
-
+**How to use tests**
+-Our tests are mede in js using Jest
+-run npm test
 **Using GitHub Desktop app**
 
 - Follow the steps below
@@ -116,7 +117,7 @@ You can deploy this project by:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 👤 **Mladan Ilic**
+👤 👤 **@zeph180 & @djo1975**
 
 - GitHub: [@githubhandle]()
 - Twitter: [@twitterhandle]()
