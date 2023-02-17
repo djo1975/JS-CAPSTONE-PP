@@ -11,7 +11,7 @@ function createCommentModal(product) {
   commentModal.appendChild(closeBtn);
 
   closeBtn.addEventListener('click', () => {
-    commentModal.style.display = 'none';
+    commentModal.classList.add('hidden');
   });
 
   const productImage = document.createElement('img');
