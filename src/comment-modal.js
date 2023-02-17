@@ -2,6 +2,7 @@ import { commentPost, getLastTwoComments } from './comment-form.js';
 import calCom from './comment-counter.js';
 
 function createCommentModal(product) {
+  let autoRefreshInterval;
   const commentModal = document.createElement('div');
   commentModal.classList.add('comment-modal');
   commentModal.classList.add('hidden');
@@ -35,6 +36,11 @@ function createCommentModal(product) {
   commentModal.appendChild(commentsSection);
 
   function updateComments() {
+    // clear autoRefreshInterval if it is set
+    if (autoRefreshInterval) {
+      clearInterval(autoRefreshInterval);
+    }
+
     getLastTwoComments(product.idMeal)
       .then((comments) => {
         commentHeader.innerHTML = `Comments (${comments.length})`;
@@ -72,14 +78,13 @@ function createCommentModal(product) {
   const submitBtn = document.createElement('button');
   submitBtn.innerHTML = 'Submit';
   addCommentSection.appendChild(submitBtn);
-  // eslint-disable-next-line no-unused-vars
-  let autoRefreshInterval;
+
   submitBtn.addEventListener('click', () => {
     const username = nameInput.value;
     const comment = commentTextarea.value;
     commentPost(product.idMeal, username, comment)
       .then(() => {
-      // clear inputs
+        // clear inputs
         nameInput.value = '';
         commentTextarea.value = '';
         // update comments
@@ -90,7 +95,7 @@ function createCommentModal(product) {
           getLastTwoComments(product.idMeal)
             .then((comments) => {
               if (comments.length > 2) {
-              // if there are more than two comments, update the comments section
+                // if there are more than two comments, update the comments section
                 updateComments();
               }
             });
@@ -102,5 +107,6 @@ function createCommentModal(product) {
 
   return commentModal;
 }
+
 calCom();
 export default createCommentModal;
