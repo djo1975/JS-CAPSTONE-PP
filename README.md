@@ -58,7 +58,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Visit the live demo [https://soft-kitsune-86834d.netlify.app]
+- Visit the live demo [https://gilded-biscochitos-2d3114.netlify.app]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
